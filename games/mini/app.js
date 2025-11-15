@@ -2,26 +2,23 @@
 (() => {
   // === SOLUTION GRID ===
   const solution = [
-    ["#", "#", "V", "O", "I"],
-    ["#", "C", "A", "T", "S"],
-    ["#", "A", "L", "T", "O"],
-    ["B", "L", "U", "E", "#"],
-    ["T", "I", "E", "R", "#"],
-    ["C", "#", "#", "#", "#"]
+    ["#", "#", "U", "N", "I"],
+    ["#", "X", "#", "E", "#"],
+    ["A", "M", "O", "U", "R"],
+    ["F", "A", "I", "R", "#"],
+    ["#", "S", "N", "O", "B"],
+    // ["#", "#", "#", "#", "#"]⁄
   ];
 
   // === WORDS ===
   let words = [
-    {number:1, dir:"across", cells:[[0,2],[0,3],[0,4]], clue:"Favourite Stockholm transportation"},
-    {number:1, dir:"down",   cells:[[0,2],[1,2],[2,2],[3,2],[4,2]], clue:"Worth of a shiny thing"},
-    {number:2, dir:"down",   cells:[[0,3],[1,3],[2,3],[3,3],[4,3]], clue:"Us when we sleep together (sing.)"},
-    {number:3, dir:"down",   cells:[[0,4],[1,4],[2,4]], clue:"Three-letter code for uniformity worldwide"},
-    {number:4, dir:"across", cells:[[1,1],[1,2],[1,3],[1,4]], clue:"Our cartoon alter egos"},
-    {number:4, dir:"down",   cells:[[1,1],[2,1],[3,1],[4,1]], clue:"Potential destination in USA after a few Swedish winters"},
-    {number:5, dir:"across", cells:[[2,1],[2,2],[2,3],[2,4]], clue:"'Said' to stop Mexicans"},
-    {number:6, dir:"across", cells:[[3,0],[3,1],[3,2],[3,3]], clue:"Me (Rodri) in 4-across"},
-    {number:6, dir:"down",   cells:[[3,0],[4,0],[5,0]], clue:"Controversial currency (abbr.)"},
-    {number:7, dir:"across", cells:[[4,0],[4,1],[4,2],[4,3]], clue:"Part of a wedding cake, one above another"}
+    {number:1, dir:"across", cells:[[0,2],[0,3],[0,4]], clue:"Liver HIIT"}, // UNI
+    {number:1, dir:"down",   cells:[[0,2],[0,3]], clue:"Full time job + full time education = stressful ___"}, // AF
+    {number:2, dir:"down", cells:[[1,1],[1,2],[1,3],[1,4]], clue:"Where you wore the better top."}, // XMAS
+    {number:3, dir:"across",   cells:[[2,0],[2,1],[2,2],[2,3],[2,4]], clue:"Esteban"}, // AMOUR
+    {number:4, dir:"across",   cells:[[3,0],[3,1],[3,2],[3,3]], clue:"That's so..."}, // FAIR
+    {number:4, dir:"down",   cells:[[3,0],[3,1],[3,2],[3,3],[3,4]], clue:"Meet my friends: Here's Ramon and here's Cajal"}, // NEURO
+    {number:5, dir:"across", cells:[[4,1],[4,2],[4,3],[4,4]], clue:"It's giving Moraleja"}, // SNOB
   ];
   // Sort by number, then across before down
   words = words.sort((a, b) => a.number - b.number || (a.dir === "across" ? -1 : 1));
@@ -41,7 +38,7 @@
 
   // --- Build grid and overlay numbers ---
   function createGrid() {
-    for (let r = 0; r < 6; r++) {
+    for (let r = 0; r < 5; r++) {
       cells[r] = [];
       for (let c = 0; c < 5; c++) {
         let cell;
@@ -230,7 +227,7 @@
   }
 
   function clearHighlights() {
-    for (let rr = 0; rr < 6; rr++) {
+    for (let rr = 0; rr < 5; rr++) {
       for (let cc = 0; cc < 5; cc++) {
         if (solution[rr][cc] !== "#") {
           cells[rr][cc].classList.remove("highlight", "selected");
@@ -257,7 +254,7 @@
 
   // --- Check helpers (exposed on window) ---
   function checkPuzzle() {
-    for (let r = 0; r < 6; r++) {
+    for (let r = 0; r < 5; r++) {
       for (let c = 0; c < 5; c++) {
         if (solution[r][c] === "#") continue;
         const cell = cells[r][c];

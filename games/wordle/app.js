@@ -1,5 +1,5 @@
 (function(){
-  const SOLUTION = "party";
+  const SOLUTION = "yappy";
   const MAX_ROWS = 6;
   const WORD_LENGTH = 5;
 

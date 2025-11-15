@@ -1,8 +1,8 @@
 const CATEGORIES = [
-  { name: "THEY FORM A NICKNAME WHEN COMBINED WITH SARA", color: "group-yellow", words: ["BACÍN", "JEVO", "WARMA", "VILLOSO"] },
-  { name: "DATES THAT WE WHERE ON (WHEN WE WERE NOT DATING)", color: "group-green", words: ["SUSHI", "TAYLOR", "ROOFTOP", "ICE SKATING"] },
-  { name: "NORWAY ROADTRIP STARTER PACK", color: "group-blue", words: ["XC60", "WIPES", "MARSHMALLOWS", "MINK"] },
-  { name: "RHYMES WITH GOTHENBURG FRIENDS", color: "group-purple", words: ["CHÂTEAU", "KOREAN", "DILEMMA", "CHIA"] }
+  { name: "WORDLE STARTING WORDS", color: "group-yellow", words: ["PIOUS", "ADIEU", "CRANE", "STALE"] },
+  { name: "THINGS YOU DO AT LUNCH", color: "group-green", words: ["YAP", "GAMES", "COMPLAIN", "STALK"] },
+  { name: "ALE'S FACETS", color: "group-blue", words: ["VOGUE", "HOOD", "BOHO", "VASQUE"] },
+  { name: "THAT'S SO...", color: "group-purple", words: ["FAIR", "REAL", "TRUE", "CRAZY"] }
 ];
 
 let words = CATEGORIES.flatMap(c => c.words).sort(() => Math.random() - 0.5);
