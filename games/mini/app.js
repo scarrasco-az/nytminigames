@@ -7,7 +7,6 @@
     ["A", "M", "O", "U", "R"],
     ["F", "A", "I", "R", "#"],
     ["#", "S", "N", "O", "B"],
-    // ["#", "#", "#", "#", "#"]⁄
   ];
 
   // === WORDS ===
@@ -19,6 +18,7 @@
     {number:4, dir:"across",   cells:[[2,0],[2,1],[2,2],[2,3],[2,4]], clue:"Esteban"}, // AMOUR
     {number:5, dir:"across",   cells:[[3,0],[3,1],[3,2],[3,3]], clue:"That's so..."}, // FAIR
     {number:6, dir:"across", cells:[[4,1],[4,2],[4,3],[4,4]], clue:"It's giving Moraleja"}, // SNOB
+    {number:7, dir:"down", cells:[[2,2],[3,2],[4,2]], clue:"Give us a break. This is hard, girl."}, // OIN
   ];
   // Sort by number, then across before down
   words = words.sort((a, b) => a.number - b.number || (a.dir === "across" ? -1 : 1));
