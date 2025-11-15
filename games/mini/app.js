@@ -13,12 +13,12 @@
   // === WORDS ===
   let words = [
     {number:1, dir:"across", cells:[[0,2],[0,3],[0,4]], clue:"Liver HIIT"}, // UNI
-    {number:1, dir:"down",   cells:[[0,2],[0,3]], clue:"Full time job + full time education = stressful ___"}, // AF
-    {number:2, dir:"down", cells:[[1,1],[1,2],[1,3],[1,4]], clue:"Where you wore the better top."}, // XMAS
-    {number:3, dir:"across",   cells:[[2,0],[2,1],[2,2],[2,3],[2,4]], clue:"Esteban"}, // AMOUR
-    {number:4, dir:"across",   cells:[[3,0],[3,1],[3,2],[3,3]], clue:"That's so..."}, // FAIR
-    {number:4, dir:"down",   cells:[[3,0],[3,1],[3,2],[3,3],[3,4]], clue:"Meet my friends: Here's Ramon and here's Cajal"}, // NEURO
-    {number:5, dir:"across", cells:[[4,1],[4,2],[4,3],[4,4]], clue:"It's giving Moraleja"}, // SNOB
+    {number:2, dir:"down",   cells:[[0,3],[1,3],[2,3],[3,3],[4,3]], clue:"Meet my friends: Here's Ramon and here's Cajal"}, // NEURO
+    {number:3, dir:"down", cells:[[1,1],[2,1],[3,1],[4,1]], clue:"Where you wore the better top."}, // XMAS
+    {number:4, dir:"down",   cells:[[2,0],[3,0]], clue:"Full time job + full time education = stressful ___"}, // AF
+    {number:4, dir:"across",   cells:[[2,0],[2,1],[2,2],[2,3],[2,4]], clue:"Esteban"}, // AMOUR
+    {number:5, dir:"across",   cells:[[3,0],[3,1],[3,2],[3,3]], clue:"That's so..."}, // FAIR
+    {number:6, dir:"across", cells:[[4,1],[4,2],[4,3],[4,4]], clue:"It's giving Moraleja"}, // SNOB
   ];
   // Sort by number, then across before down
   words = words.sort((a, b) => a.number - b.number || (a.dir === "across" ? -1 : 1));
