@@ -1,24 +1,24 @@
 const gridLetters = [
   "TMUTIS".split(''),
   "UOANSP".split(''),
-  "NAINGO".split(''),
+  "NAINSO".split(''),
   "ATECAG".split(''),
   "DVTURE".split(''),
   "AENOOB".split(''),
   "LOSKYA".split(''),
   "CHOLGO".split('')
 ];
-const themeWords = ['MOUNTAIN','TUNATECA', 'YOGA', 'GOSSIP', 'ALCOHOL', 'BOOKS'];
+const themeWords = ['MOUNTAIN','TUNATECA', 'YOGA', 'GOSSIPS', 'ALCOHOL', 'BOOKS'];
 const spangram = 'ADVENTURE';
 const allSolutions = [...themeWords, spangram];
 const wordToPath = {
-  'MOUNTAIN':[[1,4],[1,3],[2,2],[3,2]],
-  'TUNATECA': [[3,0],[4,0],[4,1],[5,1],[5,0],[6,0],[7,0]],
-  'YOGA': [[1,2],[1,1],[2,1],[3,1]],
-  'GOSSIP': [[2,3],[3,3],[4,2],[4,3],[4,4],[3,4],[2,4],[3,5],[4,5]],
-  'ALCOHOL': [[5,4],[6,4],[5,3],[6,3],[5,2],[6,1],[6,2],[7,1]],
-  'BOOKS': [[7,2],[7,3],[7,4],[7,5],[6,5],[5,5]],
-  'ADVENTURE': [[2,0],[1,0],[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,5],[2,5]]
+  'MOUNTAIN': [[0,1],[1,1],[0,2],[1,3],[0,3],[1,2],[2,2],[2,3]],
+  'TUNATECA': [[4,2],[4,3],[5,2],[5,0],[3,1],[3,2],[3,3],[3,4]],
+  'YOGA': [[6,4],[6,1],[3,5],[3,4]],
+  'GOSSIPS': [[3,5],[5,3],[6,2],[2,4],[1,4],[2,2],[1,5],[0,5]],
+  'ALCOHOL': [[3,0],[6,0],[7,0],[6,1],[7,1],[7,2],[7,3]],
+  'BOOKS': [[5,5],[5,4],[5,3],[6,3],[6,2]],
+  'ADVENTURE': [[3,0],[4,0],[4,1],[5,1],[5,2],[4,2],[4,3],[4,4],[4,5]]
 };
 
 let found = new Set();
